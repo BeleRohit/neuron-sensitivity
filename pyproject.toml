@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "neuron-sensitivity"
+version = "0.1.0"
+description = "Local MNIST experiments on neuron-level weight perturbations"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24", "torch>=2.1", "pandas>=2.0", "matplotlib>=3.7"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "jupyter>=1"]
+
+[project.scripts]
+neuron-sensitivity = "neuron_sensitivity.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["neuron_sensitivity*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
