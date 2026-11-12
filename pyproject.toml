@@ -14,6 +14,7 @@ dev = ["pytest>=7", "jupyter>=1"]
 
 [project.scripts]
 neuron-sensitivity = "neuron_sensitivity.cli:main"
+neuron-sensitivity-phase2 = "neuron_sensitivity.phase2_cli:main"
 
 [tool.setuptools.packages.find]
 include = ["neuron_sensitivity*"]

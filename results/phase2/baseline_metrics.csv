@@ -1,0 +1,6 @@
+seed,baseline_accuracy,baseline_correct,train_loss_final,checkpoint
+42,0.9716,9716,0.07248337768117587,results/phase2/checkpoints/model_seed_42.pt
+43,0.9727,9727,0.07793928442597389,results/phase2/checkpoints/model_seed_43.pt
+44,0.9711,9711,0.07929610784649849,results/phase2/checkpoints/model_seed_44.pt
+45,0.9733,9733,0.073271982862552,results/phase2/checkpoints/model_seed_45.pt
+46,0.9735,9735,0.07612152758836746,results/phase2/checkpoints/model_seed_46.pt

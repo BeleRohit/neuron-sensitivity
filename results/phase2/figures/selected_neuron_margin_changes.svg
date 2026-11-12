@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="700" viewBox="0 0 1100 700">
+<rect width="100%" height="100%" fill="white"/>
+<style>text{font-family:Arial,Helvetica,sans-serif;fill:#202833}.grid{stroke:#dce2e9;stroke-width:1}.axis{stroke:#34404d;stroke-width:1.5}</style>
+<text x="550.0" y="38.0" text-anchor="middle" font-size="23" font-weight="bold">True-label margin change for selected low- and high-sensitivity neurons</text>
+<line class="grid" x1="95" y1="540.0" x2="995" y2="540.0"/>
+<text x="83.0" y="544.0" text-anchor="end" font-size="11" font-weight="normal">-0.50</text>
+<line class="grid" x1="95" y1="430.0" x2="995" y2="430.0"/>
+<text x="83.0" y="434.0" text-anchor="end" font-size="11" font-weight="normal">-0.37</text>
+<line class="grid" x1="95" y1="320.0" x2="995" y2="320.0"/>
+<text x="83.0" y="324.0" text-anchor="end" font-size="11" font-weight="normal">-0.23</text>
+<line class="grid" x1="95" y1="210.0" x2="995" y2="210.0"/>
+<text x="83.0" y="214.0" text-anchor="end" font-size="11" font-weight="normal">-0.10</text>
+<line class="grid" x1="95" y1="100.0" x2="995" y2="100.0"/>
+<text x="83.0" y="104.0" text-anchor="end" font-size="11" font-weight="normal">0.03</text>
+<line class="axis" x1="95" y1="540" x2="995" y2="540"/>
+<line class="axis" x1="95" y1="100" x2="95" y2="540"/>
+<text x="26.0" y="320.0" text-anchor="middle" font-size="12" font-weight="normal" transform="rotate(-90 26 320.0)">Change in true-label margin (logit units)</text>
+<line x1="95" y1="125.0136178832488" x2="995" y2="125.0136178832488" stroke="#333" stroke-width="2"/>
+<rect x="103.1" y="125.0136178832488" width="28.8" height="1" fill="#9aa5b1"/>
+<text x="117.5" y="566.0" text-anchor="middle" font-size="9" font-weight="normal" transform="rotate(-45 117.5 566)">42 fc1 low</text>
+<rect x="148.1" y="125.0136178832488" width="28.8" height="383.8500459759514" fill="#3569a8"/>
+<text x="162.5" y="566.0" text-anchor="middle" font-size="9" font-weight="normal" transform="rotate(-45 162.5 566)">42 fc1 high</text>
+<rect x="193.1" y="125.0136178832488" width="28.8" height="1" fill="#9aa5b1"/>
+<text x="207.5" y="566.0" text-anchor="middle" font-size="9" font-weight="normal" transform="rotate(-45 207.5 566)">42 fc2 low</text>
+<rect x="238.1" y="125.0136178832488" width="28.8" height="305.4391084905403" fill="#dd7435"/>
+<text x="252.5" y="566.0" text-anchor="middle" font-size="9" font-weight="normal" transform="rotate(-45 252.5 566)">42 fc2 high</text>
+<rect x="283.1" y="125.01347093663207" width="28.8" height="1" fill="#9aa5b1"/>
+<text x="297.5" y="566.0" text-anchor="middle" font-size="9" font-weight="normal" transform="rotate(-45 297.5 566)">43 fc1 low</text>
+<rect x="328.1" y="125.0136178832488" width="28.8" height="375.55618512660647" fill="#3569a8"/>
+<text x="342.5" y="566.0" text-anchor="middle" font-size="9" font-weight="normal" transform="rotate(-45 342.5 566)">43 fc1 high</text>
+<rect x="373.1" y="125.01347093663207" width="28.8" height="1" fill="#9aa5b1"/>
+<text x="387.5" y="566.0" text-anchor="middle" font-size="9" font-weight="normal" transform="rotate(-45 387.5 566)">43 fc2 low</text>
+<rect x="418.1" y="125.0136178832488" width="28.8" height="303.18082148807304" fill="#dd7435"/>
+<text x="432.5" y="566.0" text-anchor="middle" font-size="9" font-weight="normal" transform="rotate(-45 432.5 566)">43 fc2 high</text>
+<rect x="463.1" y="125.01357734625145" width="28.8" height="1" fill="#9aa5b1"/>
+<text x="477.5" y="566.0" text-anchor="middle" font-size="9" font-weight="normal" transform="rotate(-45 477.5 566)">44 fc1 low</text>
+<rect x="508.1" y="125.0136178832488" width="28.8" height="330.0128429442597" fill="#3569a8"/>
+<text x="522.5" y="566.0" text-anchor="middle" font-size="9" font-weight="normal" transform="rotate(-45 522.5 566)">44 fc1 high</text>
+<rect x="553.1" y="125.01357734625145" width="28.8" height="1" fill="#9aa5b1"/>
+<text x="567.5" y="566.0" text-anchor="middle" font-size="9" font-weight="normal" transform="rotate(-45 567.5 566)">44 fc2 low</text>
+<rect x="598.1" y="100.0" width="28.8" height="25.0136178832488" fill="#dd7435"/>
+<text x="612.5" y="566.0" text-anchor="middle" font-size="9" font-weight="normal" transform="rotate(-45 612.5 566)">44 fc2 high</text>
+<rect x="643.1" y="125.0136178832488" width="28.8" height="1" fill="#9aa5b1"/>
+<text x="657.5" y="566.0" text-anchor="middle" font-size="9" font-weight="normal" transform="rotate(-45 657.5 566)">45 fc1 low</text>
+<rect x="688.1" y="125.0136178832488" width="28.8" height="303.8520596973741" fill="#3569a8"/>
+<text x="702.5" y="566.0" text-anchor="middle" font-size="9" font-weight="normal" transform="rotate(-45 702.5 566)">45 fc1 high</text>
+<rect x="733.1" y="125.0136178832488" width="28.8" height="1" fill="#9aa5b1"/>
+<text x="747.5" y="566.0" text-anchor="middle" font-size="9" font-weight="normal" transform="rotate(-45 747.5 566)">45 fc2 low</text>
+<rect x="778.1" y="125.0136178832488" width="28.8" height="214.66643891092735" fill="#dd7435"/>
+<text x="792.5" y="566.0" text-anchor="middle" font-size="9" font-weight="normal" transform="rotate(-45 792.5 566)">45 fc2 high</text>
+<rect x="823.1" y="125.0136178832488" width="28.8" height="1" fill="#9aa5b1"/>
+<text x="837.5" y="566.0" text-anchor="middle" font-size="9" font-weight="normal" transform="rotate(-45 837.5 566)">46 fc1 low</text>
+<rect x="868.1" y="125.0136178832488" width="28.8" height="414.9863821167512" fill="#3569a8"/>
+<text x="882.5" y="566.0" text-anchor="middle" font-size="9" font-weight="normal" transform="rotate(-45 882.5 566)">46 fc1 high</text>
+<rect x="913.1" y="125.0136178832488" width="28.8" height="1" fill="#9aa5b1"/>
+<text x="927.5" y="566.0" text-anchor="middle" font-size="9" font-weight="normal" transform="rotate(-45 927.5 566)">46 fc2 low</text>
+<rect x="958.1" y="125.0136178832488" width="28.8" height="89.951776375718" fill="#dd7435"/>
+<text x="972.5" y="566.0" text-anchor="middle" font-size="9" font-weight="normal" transform="rotate(-45 972.5 566)">46 fc2 high</text>
+<text x="545.0" y="626.0" text-anchor="middle" font-size="13" font-weight="normal">Seed / layer / lowest or highest sensitivity neuron</text>
+</svg>

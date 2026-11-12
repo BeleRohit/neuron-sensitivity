@@ -1,6 +1,6 @@
 # Neuron Sensitivity
 
-A small, local PyTorch experiment on how changes to individual hidden neuron weight vectors affect an MNIST MLP. It is an educational investigation, not a claim of novel research.
+A local PyTorch study of how single-neuron weight interventions change an MNIST MLP’s predictions, and whether pre-ablation neuron properties predict that change. This is an educational investigation, not a claim of novel research.
 
 ## Setup
 
@@ -14,7 +14,7 @@ python -m pip install -e '.[dev]'
 
 The first run downloads the four standard MNIST IDX files into `data/`. It also reads the raw uncompressed IDX files under `data/MNIST/raw/`, which is useful when you obtain the archive separately. Automatic download requires network access.
 
-## Run
+## Phase 1: weight-space interventions
 
 ```bash
 python -m neuron_sensitivity.cli
@@ -24,7 +24,17 @@ This trains a `784 → 128 → 64 → 10` ReLU MLP for five epochs, saves `resul
 
 Noise strength is the L2 norm of the added vector divided by the original row norm. Scaling strength `s` multiplies the row by `1+s`. Biases remain unchanged for noise and scaling. Ablation zeros both the incoming row and its bias, which makes that ReLU unit output zero. All experiments reload the same in-memory baseline state before measurement; the saved checkpoint is never edited.
 
-Results include `training_metrics.csv`, `neuron_sensitivity.csv`, `summary.csv`, and plots (`sensitivity_heatmap.png`, `accuracy_vs_strength.png`, `weight_norm_vs_sensitivity.png`, `layerwise_sensitivity.png`). `EXPERIMENT_REPORT.md` records the measured findings and limitations. The notebook in `notebooks/01_experiment_walkthrough.ipynb` walks through the same methodology.
+Results include `training_metrics.csv`, `neuron_sensitivity.csv`, `summary.csv`, and plots. `EXPERIMENT_REPORT.md` records the measurements and limitations. The walkthrough is in `notebooks/01_experiment_walkthrough.ipynb`.
+
+## Phase 2: predict sensitivity across models
+
+```bash
+python -m neuron_sensitivity.phase2_cli --data-dir data --output-dir results/phase2 --device auto
+```
+
+This trains five independent models (seeds 42–46), ablates all 192 hidden neurons in each model on the full test set, extracts pre-ablation properties, runs leave-one-trained-model-out ridge prediction, and writes per-model data, fold summaries, checkpoints, and nine figures. Seeds—not neurons—are the replication units for uncertainty. Phase 2 figures are scalable SVGs with PNG previews under `results/phase2/figures/`.
+
+The recorded run’s baseline accuracy was 97.244% ± 0.105 percentage points across seeds. A five-feature predictor achieved held-out Spearman ρ of 0.835 in `fc1` and 0.820 in `fc2`, versus 0.588 and 0.442 for incoming weight norm alone. See [`PHASE2_REPORT.md`](PHASE2_REPORT.md), [`PHASE1_VS_PHASE2.md`](PHASE1_VS_PHASE2.md), and [`PHASE2_SUMMARY.md`](PHASE2_SUMMARY.md) for methods, interpretation, and limitations. The experiment notebook is `notebooks/02_phase2_predicting_sensitivity.ipynb`; a blog draft is in `BLOG_DRAFT.md`.
 
 ## Tests
 

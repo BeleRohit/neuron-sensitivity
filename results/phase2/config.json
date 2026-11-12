@@ -1,0 +1,21 @@
+{
+  "architecture": "784-128-64-10",
+  "optimizer": "Adam",
+  "learning_rate": 0.001,
+  "loss": "cross_entropy",
+  "epochs": 5,
+  "batch_size": 128,
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "test_examples": 10000,
+  "ablation": "zero one hidden neuron's incoming weight row and bias; restore full baseline state after each intervention",
+  "target": "fraction of test examples whose predicted class changes after ablation",
+  "local_contribution": "mean absolute activation-times-local-logit-Jacobian over test examples and 10 logits; for fc1 the Jacobian includes the fc2 ReLU gate and is explicitly a first-order local approximation",
+  "device": "cpu",
+  "train_examples": 60000
+}
