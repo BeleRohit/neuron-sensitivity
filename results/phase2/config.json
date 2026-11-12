@@ -17,5 +17,8 @@
   "target": "fraction of test examples whose predicted class changes after ablation",
   "local_contribution": "mean absolute activation-times-local-logit-Jacobian over test examples and 10 logits; for fc1 the Jacobian includes the fc2 ReLU gate and is explicitly a first-order local approximation",
   "device": "cpu",
-  "train_examples": 60000
+  "train_examples": 60000,
+  "torch_version": "2.9.0",
+  "numpy_version": "2.5.1",
+  "python_version": "3.13.7"
 }

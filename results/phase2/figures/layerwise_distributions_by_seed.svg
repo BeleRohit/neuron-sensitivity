@@ -2,6 +2,7 @@
 <rect width="100%" height="100%" fill="white"/>
 <style>text{font-family:Arial,Helvetica,sans-serif;fill:#202833}.grid{stroke:#dce2e9;stroke-width:1}.axis{stroke:#34404d;stroke-width:1.5}</style>
 <text x="550.0" y="38.0" text-anchor="middle" font-size="23" font-weight="bold">Ablation sensitivity distributions by layer and training seed</text>
+<text x="550.0" y="62.0" text-anchor="middle" font-size="12" font-weight="normal">MNIST test set · 10,000 examples/model · 5 independent seeds · fc1: 128 units, fc2: 64 units</text>
 <line class="grid" x1="115" y1="580.0" x2="965" y2="580.0"/>
 <text x="103.0" y="584.0" text-anchor="end" font-size="11" font-weight="normal">0.000</text>
 <line class="grid" x1="115" y1="457.5" x2="965" y2="457.5"/>

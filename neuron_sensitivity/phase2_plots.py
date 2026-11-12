@@ -22,7 +22,8 @@ def _start(title: str) -> list[str]:
     return [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">',
             '<rect width="100%" height="100%" fill="white"/>',
             '<style>text{font-family:Arial,Helvetica,sans-serif;fill:#202833}.grid{stroke:#dce2e9;stroke-width:1}.axis{stroke:#34404d;stroke-width:1.5}</style>',
-            _text(W/2, 38, title, 23, weight="bold")]
+            _text(W/2, 38, title, 23, weight="bold"),
+            _text(W/2, 62, "MNIST test set · 10,000 examples/model · 5 independent seeds · fc1: 128 units, fc2: 64 units", 12)]
 
 
 def _finish(path: Path, svg: list[str]) -> None:
