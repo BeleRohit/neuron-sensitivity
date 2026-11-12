@@ -26,7 +26,7 @@ Mean prediction-flip rates averaged over neurons (and, for noise, three fixed pe
 
 Average flip rates rose with strength at all three tested levels for both noise and scaling. Mean accuracy moved only a little because flips include predictions that changed both from correct to incorrect and from incorrect to correct. For example, full-strength scaling of `fc2` changed 0.4145% of predictions on average while reducing mean accuracy by only 0.0358 percentage points.
 
-Second-layer ablations changed more predictions on average, but the most sensitive individual was in the first layer: `fc1` neuron 104 changed 342 of 10,000 predictions (3.42%) and reduced accuracy from 97.16% to 94.04%. The most sensitive `fc2` ablation changed 0.90% of predictions. Seven of 192 neuron ablations changed no test predictions.
+Second-layer ablations changed more predictions on average (0.466% vs. 0.293%), while first-layer ablations caused the larger mean accuracy loss (0.058 vs. 0.047 percentage points). The most sensitive individual was in the first layer: `fc1` neuron 104 changed 342 of 10,000 predictions (3.42%) and reduced accuracy from 97.16% to 94.04% (312 fewer correct predictions). The most sensitive `fc2` ablation changed 0.90% of predictions. Seven of 192 neuron ablations changed no test predictions.
 
 Weight norm had a moderate positive rank association with ablation flip rate (`fc1` Spearman ρ = 0.56; `fc2` ρ = 0.32), so norm carried some signal in this one trained model but was not a sufficient measure of functional effect. Two `fc1` neurons with nearly identical norms illustrate the spread: neuron 104 had norm 2.987 and 3.42% flips; neuron 122 had norm 3.006 and 0.61% flips. This single-seed run does not establish a general predictive relationship.
 
