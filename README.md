@@ -12,7 +12,7 @@ source .venv/bin/activate
 python -m pip install -e '.[dev]'
 ```
 
-The first run downloads the four standard MNIST IDX files into `data/`. The download requires network access.
+The first run downloads the four standard MNIST IDX files into `data/`. It also reads the raw uncompressed IDX files under `data/MNIST/raw/`, which is useful when you obtain the archive separately. Automatic download requires network access.
 
 ## Run
 

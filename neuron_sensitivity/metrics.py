@@ -7,9 +7,10 @@ from torch import nn
 @torch.inference_mode()
 def measure(model: nn.Module, baseline_state: dict[str, torch.Tensor], layer: str,
             neuron: int, method: str, strength: float, seed: int,
-            x: torch.Tensor, y: torch.Tensor, device: torch.device) -> dict:
+            x: torch.Tensor, y: torch.Tensor, device: torch.device,
+            baseline_logits: torch.Tensor | None = None) -> dict:
     model.load_state_dict(baseline_state)
-    base = model(x.to(device))
+    base = model(x.to(device)) if baseline_logits is None else baseline_logits
     base_probs = base.softmax(dim=1)
     base_pred = base.argmax(dim=1)
     from .perturb import neuron_weight, perturb_neuron

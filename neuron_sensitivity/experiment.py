@@ -20,18 +20,25 @@ def run_experiments(model: torch.nn.Module, test_data, out_dir: str | Path,
     if sample_limit is not None:
         x, y = x[:sample_limit], y[:sample_limit]
     baseline_state = {key: value.detach().clone() for key, value in model.state_dict().items()}
+    with torch.inference_mode():
+        baseline_logits = model(x.to(device))
     rows = []
+    total_neurons = sum(getattr(model, layer).weight.shape[0] for layer in LAYERS)
+    completed_neurons = 0
     for layer in LAYERS:
         count = getattr(model, layer).weight.shape[0]
         for neuron in range(count):
             for strength in strengths:
                 for seed in range(noise_repeats):
                     rows.append(measure(model, baseline_state, layer, neuron,
-                                        "noise", strength, seed, x, y, device))
+                                        "noise", strength, seed, x, y, device, baseline_logits))
                 rows.append(measure(model, baseline_state, layer, neuron,
-                                    "scale", strength, 0, x, y, device))
+                                    "scale", strength, 0, x, y, device, baseline_logits))
             rows.append(measure(model, baseline_state, layer, neuron,
-                                "ablation", 1.0, 0, x, y, device))
+                                "ablation", 1.0, 0, x, y, device, baseline_logits))
+            completed_neurons += 1
+            if completed_neurons % 16 == 0 or completed_neurons == total_neurons:
+                print(f"Evaluated {completed_neurons}/{total_neurons} neurons", flush=True)
     frame = pd.DataFrame(rows)
     frame.to_csv(out_dir / "neuron_sensitivity.csv", index=False)
     return frame
